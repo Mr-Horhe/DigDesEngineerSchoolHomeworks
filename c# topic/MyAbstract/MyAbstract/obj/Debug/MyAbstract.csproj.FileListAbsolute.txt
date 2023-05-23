@@ -1,0 +1,8 @@
+D:\c++\MyAbstract\MyAbstract\bin\Debug\MyAbstract.exe.config
+D:\c++\MyAbstract\MyAbstract\bin\Debug\MyAbstract.exe
+D:\c++\MyAbstract\MyAbstract\bin\Debug\MyAbstract.pdb
+D:\c++\MyAbstract\MyAbstract\obj\Debug\MyAbstract.csproj.AssemblyReference.cache
+D:\c++\MyAbstract\MyAbstract\obj\Debug\MyAbstract.csproj.SuggestedBindingRedirects.cache
+D:\c++\MyAbstract\MyAbstract\obj\Debug\MyAbstract.csproj.CoreCompileInputs.cache
+D:\c++\MyAbstract\MyAbstract\obj\Debug\MyAbstract.exe
+D:\c++\MyAbstract\MyAbstract\obj\Debug\MyAbstract.pdb

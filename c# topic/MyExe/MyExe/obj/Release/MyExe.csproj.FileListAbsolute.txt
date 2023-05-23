@@ -1,0 +1,10 @@
+D:\c#\MyExe\MyExe\bin\Release\MyExe.exe.config
+D:\c#\MyExe\MyExe\bin\Release\MyExe.exe
+D:\c#\MyExe\MyExe\bin\Release\MyExe.pdb
+D:\c#\MyExe\MyExe\bin\Release\MyLib.dll
+D:\c#\MyExe\MyExe\obj\Release\MyExe.csproj.AssemblyReference.cache
+D:\c#\MyExe\MyExe\obj\Release\MyExe.csproj.SuggestedBindingRedirects.cache
+D:\c#\MyExe\MyExe\obj\Release\MyExe.csproj.CoreCompileInputs.cache
+D:\c#\MyExe\MyExe\obj\Release\MyExe.csproj.CopyComplete
+D:\c#\MyExe\MyExe\obj\Release\MyExe.exe
+D:\c#\MyExe\MyExe\obj\Release\MyExe.pdb
