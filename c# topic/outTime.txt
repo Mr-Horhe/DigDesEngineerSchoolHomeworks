@@ -1,2 +1,2 @@
-Normal: 117
-Parallel: 99
+Normal: 115
+Parallel: 61
