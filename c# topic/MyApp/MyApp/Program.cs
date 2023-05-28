@@ -19,9 +19,9 @@ namespace MyExe
         public static async Task Main(string[] args)
         {
             Console.WriteLine("Введите путь к исходному файлу");
-            string inpPath = "D:\\c++\\Test\\Test\\Voina-i-Mir.txt";//Console.ReadLine(); 
+            string inpPath = "D:\\c#\\c# topic\\Voina-i-Mir.txt";//Console.ReadLine(); 
             Console.WriteLine("Введите путь к выходному файлу");
-            string outPath = "D:\\c++\\Test\\Test\\out.txt";
+            string outPath = "D:\\c#\\c# topic\\out.txt";
             Console.WriteLine("Введите путь к выходному файлу со временем выполнения");
             string outTimePath = outPath + "/../outTime.txt";
 
@@ -49,15 +49,13 @@ namespace MyExe
             //Console.WriteLine(stop.ElapsedMilliseconds);
 
             //Writing(myDictParallel, outPath);
-            
-            stopWatch.Stop();
-            stopWatch.Restart();
+            WriteTime(timeList, outTimePath);
+
             var response = await client.PostAsJsonAsync("https://localhost:7041/api/TextAnalyzer", inptext); // Вызов пост функции на сервисе
             var myDictService = await response.Content.ReadFromJsonAsync<Dictionary<string, int>>();
-            stopWatch.Stop();
-            timeList.Add("Service: " + stopWatch.ElapsedMilliseconds.ToString());
+
             Writing(myDictService, outPath);
-            WriteTime(timeList, outTimePath);
+
             Console.WriteLine("Out path: " + outPath);
             Console.WriteLine("outtime path: " + outTimePath);
 
