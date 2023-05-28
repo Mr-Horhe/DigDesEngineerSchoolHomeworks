@@ -51,7 +51,7 @@ namespace MyExe
             //Writing(myDictParallel, outPath);
             WriteTime(timeList, outTimePath);
 
-            var response = await client.PostAsJsonAsync("https://localhost:7041/api/TextAnalyzer", inptext); // Вызов пост функции на сервисе
+            var response = await client.PostAsJsonAsync("https://localhost:7041/api/TextAnalyzer", inptext);
             var myDictService = await response.Content.ReadFromJsonAsync<Dictionary<string, int>>();
 
             Writing(myDictService, outPath);
