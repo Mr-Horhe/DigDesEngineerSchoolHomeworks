@@ -23,10 +23,7 @@ currencyForm.addEventListener('submit', async (event) => {
 const catForm = document.getElementById('catForm');
 const img = document.createElement('img');
 const container1 = document.querySelector('#image-container');
-//img.src='https://cdn2.thecatapi.com/images/90.gif';
-//img.width=100;
-//img.height=100;
-//container1.append(img);
+
 catForm.addEventListener('submit', async (event)=>{
     event.preventDefault();
     try {
@@ -36,8 +33,7 @@ catForm.addEventListener('submit', async (event)=>{
         const catURL=data[0].url;
 
         img.src = catURL;
-        //img.width=100;
-        //img.height=100;
+
         const container = document.querySelector('#image-container');
 
         container.append(img);
@@ -46,14 +42,4 @@ catForm.addEventListener('submit', async (event)=>{
     }
 })
 
-
-// Устанавливаем путь к изображению
-
-
-// Устанавливаем альтернативный текст для изображения
-
-// Получаем контейнер, куда нужно вставить изображение
-
-
-// Вставляем изображение в контейнер
 
