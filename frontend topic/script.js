@@ -1,3 +1,14 @@
+const ratioInp = document.getElementById('ratio');
+const ageInp = document.getElementById('age');
+
+ratioInp.addEventListener('input', function () {
+    ageInp.value = this.value;
+});
+
+ageInp.addEventListener('input', function () {
+    ratioInp.value = this.value;
+});
+
 const currencyForm = document.getElementById('currencyForm');
 
 currencyForm.addEventListener('submit', async (event) => {
