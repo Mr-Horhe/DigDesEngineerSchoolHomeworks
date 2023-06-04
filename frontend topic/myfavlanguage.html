@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Java</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+<header>
+    <h1>Мой любимый ЯП - Java</h1>
+</header>
+
+<div class="container-column">
+    <div class="column">
+        <div>
+            <img src="jav-fotor-bg-remover-2023053016377.png" width="100" height="100" alt="Java" id="logo">
+            <h3>Язык Java</h3>
+            <p>
+                Java - один из лучших объектно ориентированных языков.
+                Разработчиком Java является канадец Джеймс Гослинг, который придумал и воплотил
+                главную особенность Java - виртуальную java-машину, обеспечивающую языку кроссплатформенность.
+                Девиз языка - напиши один раз - запускай на чём хочешь.
+                Сейчас язык поддерживается и разрабатывается фирмой Oracle.
+            </p>
+            <p>
+                От Oracle к Java есть отличная документация с туториалом и так же отличный сайт на русском с разбором
+                теории и типовых задач JavaRush.
+            </p>
+            <p>
+                <em>Интересный факт</em> - язык Java изначально назывался Oak, но, когда оказалось, что такой язык уже
+                есть
+                было принято решение назвать его как известный сорт кофе.
+            </p>
+        </div>
+    </div>
+    <div class="column">
+        <p>Ссылки для изучения Java:</p>
+        <ul>
+            <li><a href="https://docs.oracle.com/javase/tutorial/">Ссылка на документацию Oracle</a></li>
+            <li><a href="https://javarush.com/">Ссылка на JavaRush</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <p>
+            Я увлекаюсь программированием и разработкой с 18 лет, пробовал много различных языков на учёбе и работе,
+            но самым удобным и понятным языком для меня остаётся Java. Я сталкивался с такими языками, как:
+        </p>
+        <ol>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Java</li>
+        </ol>
+        <p>
+            В следующих формах вам предложено выбрать предпочитаему облать, язык и отправить данные для статистики.
+        </p>
+    </div>
+</div>
+
+<div class="container-row">
+    <div class="row">
+        <div id="react-root"></div>
+        <div class="column">
+            <fieldset>
+                <legend>Узнать курс доллара и евро</legend>
+                <form id="currencyForm">
+                    <div>
+                        <label>USD</label>
+                        <input type="text" id="USD">
+                    </div>
+                    <div>
+                        <label>EUR</label>
+                        <input type="text" id="EUR">
+                    </div>
+                    <p>
+                        <button type="button" id="getCur">Узнать</button>
+                    </p>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container-column third-form">
+            <div class="column">
+                <form action="https://www.youtube.com/watch?v=eWmBfBjBX2w" method="post" class="third-form">
+                    <p>
+                        <label for="name">Имя:</label>
+                        <input type="text" placeholder="Введите имя" id="name" name="name" required="">
+                    </p>
+                    <p>
+                        <label for="ratio">Возраст:</label>
+                        <input type="range" id="ratio" min="1" max="200" step="1" value="1">
+                        <input type="text" placeholder="Введите возраст" id="age">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" placeholder="Введите email" id="email" name="email" required="">
+                    </p>
+                    <p>
+                        <input type="submit" value="Отправить">
+                    </p>
+                </form>
+            </div>
+            <div class="column">
+                <fieldset>
+                    <legend>Получить кота</legend>
+                    <form id="catForm">
+                        <div id="image-container">
+                        </div>
+                        <p>
+                            <button type="button" id="get">Give me a cat!!!</button>
+                        </p>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    class MyForm extends React.Component{
+        constructor(props) {
+            super(props);
+            this.state = {
+                devTypes:[],
+                languages:'',
+                you:'',
+                currency:''
+            }
+        }
+        handleLanguageChange = (event) => {
+            this.setState({ languages: event.target.value });
+        };
+
+        handleYouChange = (event) => {
+            this.setState({ you: event.target.value});
+        };
+
+        handleDevTypesChange = (event)=>{
+            const { value, checked } = event.target;
+            this.setState((prevState) => {
+                if (checked) {
+                    return { devTypes: [...prevState.devTypes, value] };
+                } else {
+                    return {
+                        devTypes: prevState.devTypes.filter((devType) => devType !== value)
+                    };
+                }
+            });
+        };
+
+        handleSubmit = event => {
+            event.preventDefault();
+            alert(`Вы увлекаетесь такими направлениями разработки как ${this.state.devTypes.join(', ')};`);
+            alert(`Вы выбрали язык ${this.state.languages}`);
+            alert(`Вы ${this.state.you}`)
+        };
+
+        render() {
+            return (
+                <div className="container-column">
+                    <div className="column">
+                        <fieldset>
+                            <legend>Пройдите небольшой опрос</legend>
+                            <form onSubmit={this.handleSubmit}>
+                                <p>Выберите, какой областью/областями разработки ПО вам наиболее интересно заниматься:</p>
+                                <div className="selectList">
+                                    {['Backend разработка', 'Frontend разработка', 'Embedded разработка', 'Разработка игр']
+                                        .map(devType =>(
+                                            <label key={devType}>
+                                                <input
+                                                    type="checkbox"
+                                                    name="devType"
+                                                    value={devType}
+                                                    checked={this.state.devTypes.includes(devType)}
+                                                    onChange={this.handleDevTypesChange}
+                                                />
+                                                {devType}
+                                            </label>
+                                        ))}
+                                </div>
+                                <p>Выберете язык, который вам наиболее интересен:</p>
+                                <div className="selectList">
+                                    {['C/C++', 'Python', 'C#', 'Java'].map(language =>(
+                                        <label key={language}>
+                                            <input
+                                                type="radio"
+                                                name="language"
+                                                value={language}
+                                                checked={this.state.languages === language}
+                                                onChange={this.handleLanguageChange}
+                                            />
+                                            {language}
+                                        </label>
+                                    ))}
+                                </div>
+                                <p>Вы:</p>
+                                <label>
+                                    <select name="you" value={this.state.you} onChange={this.handleYouChange} defaultValue="гость">
+                                        <option value="">Выберите ответ</option>
+                                        <option value="гость">Гость</option>
+                                        <option value="программист">Программист</option>
+                                        <option value="иной представитель IT">Иной представитель IT</option>
+                                    </select>
+                                </label>
+                                <button type="submit">Отправить</button>
+                            </form>
+                        </fieldset>
+                    </div>
+                </div>
+            );
+        }
+    }
+    ReactDOM.render(<MyForm />, document.getElementById('react-root'));
+</script>
+
+<script src="script.js"></script>
+<footer>
+    © Морозов Сергей, 2023.
+</footer>
+
+</body>
